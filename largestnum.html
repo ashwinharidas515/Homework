@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    h1{
+        background-color: rgb(245, 220, 220);
+    }
+</style>
+</head>
+
+<body>
+    <h1>LARGEST OF THREE NUMBERS</h1>
+    <div class="containers">
+        <div class="row">
+            <div class="col col-10 sm-2">
+            </div>
+            <div class="col col-10 ssm-2">
+                <form>
+                    <table class="table">
+                        <tr>
+                            <td>ENTER 1st NUMBER</td>
+                            <td><input type="text" class="=form-control" id="num1"></td>
+                        </tr>
+                    <tr>
+                        <td>ENTER  2nd NUMBER</td>
+                        <td><input type="text" class="form-control" id="num2"></td>
+
+                    </tr>
+                <tr>
+                    <td>ENTER 3rd NUMBER</td>
+                    <td><input type="text" class="form-control"id="num3"></td>
+                </tr>    
+            <tr>
+                <td></td>
+                <td><button type="button" onclick="large();" class="btn btn-warning">SUBMIT</button></td>
+            </tr>   
+    <tr>
+        <td></td>
+        <td><input type="reset" class="btn btn-success"></td>
+    </tr>      
+    
+            <tr>
+        <td></td>
+        <td><p id="result"></p></td>
+    </tr>    
+    </table>
+
+                </form>
+            </div>
+        <div class="col col-10 sm-2"></div>
+        </div>
+    </div>
+    <script>
+        function large(){
+            var a=parseInt(document.getElementById("num1").value);
+            var b=parseInt(document.getElementById("num2").value);
+            var c=parseInt(document.getElementById("num3").value);
+            if(a>b&&a>c){
+                document.getElementById("result").innerHTML= a+"is the largest number";
+}
+       else if(b>a&&b>c){
+           document.getElementById("result").innerHTML= b+"is the largest number";
+       }
+        else{
+            document.getElementById("result").innerHTML= c+"is the largest number";
+        }
+        }
+
+    </script>
+</body>
+</html>

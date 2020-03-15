@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    h2{
+        
+        background-color: darkgreen;
+    }
+
+</style>
+<body>
+    <h2>divisible BY 8</h2>
+<div class="containers">
+    <div class="rows">
+        <div class="col col-8 col-sm-0">
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </div>
+    <div class="col col-8sm-8">
+        <form>
+            <table class="table">
+                <tr>
+                    <td>ENTER the NUMBER</td>
+                    <td><input type="text" class="form-control " id="num"></td>
+                </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" class="btn btn-success" onclick="divby8();">DIVISIBLE BY 8</button></td>
+            </tr>
+        <tr>
+            <td><p id="div"></p></td>
+            <td><p id="result"></p></td>
+        </tr>    
+        </table>
+
+        </form>
+    </div>
+    </div>
+
+</div>
+    <script>
+        function divby8(){
+            var x=parseInt(document.getElementById("num").value);
+            var y=x/8;
+            if(x%8==0){
+                document.getElementById("result").innerHTML= y+"is divisible by 8";
+            }
+            else{
+                document.getElementById("result").innerHTML= y+"is not divisible by 8";
+            }
+        }
+    </script>
+</body>
+</html>
